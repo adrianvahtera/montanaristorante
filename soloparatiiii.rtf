@@ -1,0 +1,404 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="fi">\
+<head>\
+  <meta charset="UTF-8" />\
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />\
+  <title>Montana Ristorante</title>\
+\
+  <!-- Google Fonts -->\
+  <link rel="preconnect" href="https://fonts.googleapis.com">\
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>\
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">\
+\
+  <style>\
+    :root \{\
+      --bg: #0f1a17;            /* tumma vihre\'e4 */\
+      --surface: #162622;       /* syvempi vihre\'e4 */\
+      --primary: #f4d58d;       /* l\'e4mmin kerma */\
+      --accent: #c44536;        /* tiilenpunainen */\
+      --highlight: #88c0a4;     /* salvian vihre\'e4 */\
+      --text: #f7f7f5;\
+      --muted: #c9d1cc;\
+    \}\
+\
+    * \{ box-sizing: border-box; margin: 0; padding: 0; \}\
+\
+    body \{\
+      font-family: 'DM Sans', sans-serif;\
+      background: var(--bg);\
+      color: var(--text);\
+      line-height: 1.7;\
+      scroll-behavior: smooth;\
+    \}\
+\
+    nav \{\
+      position: fixed;\
+      top: 0;\
+      width: 100%;\
+      padding: 1.2rem 3rem;\
+      display: flex;\
+      justify-content: space-between;\
+      align-items: center;\
+      z-index: 10;\
+      background: rgba(15,26,23,.65);\
+      backdrop-filter: blur(10px);\
+      animation: slideDown .8s ease forwards;\
+    \}\
+\
+    @keyframes slideDown \{\
+      from \{ transform: translateY(-100%); \}\
+      to \{ transform: translateY(0); \}\
+    \}\
+\
+    nav .logo \{ \
+<img src="N\'e4ytt\'f6kuva_2026-02-03_kello_18.24.20-removebg-preview.png" \
+     alt="Esimerkkikuva" \
+     width="400" \
+     style="display:block; margin:auto;">\
+      display: flex;\
+      align-items: center;\
+      gap: 1rem;\
+      font-family: 'Cinzel', serif;\
+      font-size: 1.4rem;\
+      letter-spacing: .15em;\
+      color: var(--primary);\
+    \}\
+\
+    nav img \{\
+      height: 54px;\
+      opacity: 0;\
+      animation: logoIn 1.2s ease forwards;\
+    \}\
+\
+    @keyframes logoIn \{\
+      from \{ opacity: 0; transform: translateY(-10px); \}\
+      to \{ opacity: 1; transform: translateY(0); \}\
+    \}\
+\
+    nav ul \{\
+      list-style: none;\
+      display: flex;\
+      gap: 2rem;\
+    \}\
+\
+    nav a \{\
+      text-decoration: none;\
+      color: var(--text);\
+      font-size: .85rem;\
+      letter-spacing: .15em;\
+      text-transform: uppercase;\
+    \}\
+\
+    header \{\
+      min-height: 100vh;\
+      background: linear-gradient(rgba(15,26,23,.45), rgba(15,26,23,.9)), url('https://images.unsplash.com/photo-1546549039-49c8cfa94a41') center/cover no-repeat;\
+      display: flex;\
+      justify-content: center;\
+      align-items: center;\
+      text-align: center;\
+      padding: 2rem;\
+    \}\
+\
+    header h1 \{\
+      font-family: 'Cinzel', serif;\
+      font-size: clamp(4.5rem, 9vw, 8rem);\
+      letter-spacing: .08em;\
+      line-height: 1.05;\
+      margin-bottom: 1rem;\
+      text-transform: uppercase;\
+      animation: heroReveal 1.4s ease forwards;\
+    \}\
+\
+    @keyframes heroReveal \{\
+      0% \{ opacity: 0; transform: translateY(40px) scale(.96); \}\
+      100% \{ opacity: 1; transform: translateY(0) scale(1); \}\
+    \}\
+\
+    @keyframes fadeUp \{\
+      from \{ opacity: 0; transform: translateY(30px); \}\
+      to \{ opacity: 1; transform: translateY(0); \}\
+    \}\
+\
+    header p \{\
+      max-width: 640px;\
+      margin: 0 auto;\
+      color: var(--muted);\
+      font-size: 1.15rem;\
+      animation: fadeIn 2s ease forwards;\
+    \}\
+\
+    @keyframes fadeIn \{\
+      from \{ opacity: 0; \}\
+      to \{ opacity: 1; \}\
+    \}\
+\
+    section \{\
+      padding: 6rem 10vw;\
+      background: var(--surface);\
+    \}\
+\
+    section:nth-of-type(even) \{ background: var(--bg); \}\
+\
+    h2 \{\
+      font-family: 'Cinzel', serif;\
+      font-size: 2.6rem;\
+      margin-bottom: 2.2rem;\
+      letter-spacing: .14em;\
+      background: linear-gradient(120deg, #f7e7b3, #d4af37, #f7e7b3);\
+      -webkit-background-clip: text;\
+      -webkit-text-fill-color: transparent;\
+      text-shadow: 0 0 18px rgba(212,175,55,.25);\
+      animation: shimmer 3.5s ease-in-out infinite;\
+    \}\
+\
+    @keyframes shimmer \{\
+      0% \{ background-position: 0% 50%; \}\
+      50% \{ background-position: 100% 50%; \}\
+      100% \{ background-position: 0% 50%; \}\
+    \}\
+\
+    .about \{\
+      display: grid;\
+      grid-template-columns: 1fr 2fr;\
+      gap: 3rem;\
+      align-items: center;\
+    \}\
+\
+    .about img \{ max-width: 220px; \}\
+\
+    .about p \{ color: var(--muted); \}\
+\
+    /* MENU ACCORDION */\
+    .accordion \{ border-top: 1px solid #2a2a2a; \}\
+\
+    .accordion details \{\
+      border-bottom: 1px solid #2f3f3a;\
+      padding: 1.5rem 0;\
+      transition: all .4s ease;\
+    \}\
+\
+    \
+\
+    \
+\
+    .accordion details:not([open]) > *:not(summary) \{\
+      animation: accordionClose .3s ease forwards;\
+    \}\
+\
+    @keyframes accordionClose \{\
+      from \{ opacity: 1; \}\
+      to \{ opacity: 0; \}\
+    \}\
+\
+    .accordion details > *:not(summary) \{\
+      animation: accordionOpen .4s ease forwards;\
+    \}\
+\
+    @keyframes accordionOpen \{\
+      from \{ opacity: 0; transform: translateY(-10px); \}\
+      to \{ opacity: 1; transform: translateY(0); \}\
+    \}\
+\
+      border-bottom: 1px solid #2a2a2a;\
+      padding: 1.5rem 0;\
+    \}\
+\
+    .accordion summary \{\
+      cursor: pointer;\
+      font-family: 'Cinzel', serif;\
+      font-size: 1.5rem;\
+      color: var(--primary);\
+      list-style: none;\
+      padding-right: 0;\
+    \}\
+\
+    \
+\
+    .menu-item \{\
+      display: grid;\
+      grid-template-columns: 1fr auto;\
+      gap: .5rem 2rem;\
+      padding: .8rem 0;\
+    \}\
+\
+    .menu-item h3 \{\
+      font-family: 'Playfair Display', serif;\
+      font-size: 1.05rem;\
+      letter-spacing: .04em;\
+    \}\
+\
+    .menu-item p \{\
+      grid-column: 1 / -1;\
+      color: var(--muted);\
+      font-size: .9rem;\
+    \}\
+\
+    .menu-item span \{\
+      font-weight: 500;\
+      color: var(--gold);\
+      white-space: nowrap;\
+    \}\
+\
+    footer \{\
+      padding: 4rem 2rem;\
+      text-align: center;\
+      background: radial-gradient(circle at top, #141c19, #090b0a);\
+      color: var(--muted);\
+      font-size: .85rem;\
+      animation: fadeUp 1.2s ease forwards;\
+    \}\
+\
+    footer img \{\
+      height: 80px;\
+      margin-bottom: 1.5rem;\
+      filter: drop-shadow(0 0 20px rgba(212,175,55,.35));\
+      animation: logoFloat 6s ease-in-out infinite;\
+    \}\
+\
+    @keyframes logoFloat \{\
+      0%,100% \{ transform: translateY(0); \}\
+      50% \{ transform: translateY(-10px); \}\
+    \}\
+\
+    footer strong \{ color: var(--gold); \}\
+\
+    @media (max-width: 900px) \{\
+      .about \{ grid-template-columns: 1fr; text-align: center; \}\
+      nav ul \{ display: none; \}\
+    \}\
+  </style>\
+</head>\
+<body>\
+\
+<nav>\
+  <div class="logo">\
+    <img src="/mnt/data/N\'e4ytt\'f6kuva_2026-02-03_kello_18.24.20-removebg-preview.png" alt="Montana logo">\
+    MONTANA\
+  </div>\
+  <ul>\
+    <li><a href="#about">Meist\'e4</a></li>\
+    <li><a href="#menu">Menu</a></li>\
+    <li><a href="#contact">Yhteystiedot</a></li>\
+  </ul>\
+</nav>\
+\
+<header>\
+  <div>\
+    <h1>Montana Ristorante</h1>\
+    <p><strong>Tervetuloa.</strong> Aitoa italialaishenkist\'e4 ruokaa, suuria annoksia ja modernia tunnelmaa Turun syd\'e4mess\'e4.</p>\
+  </div>\
+</header>\
+\
+<section id="about" class="about">\
+  <img src="/mnt/data/N\'e4ytt\'f6kuva_2026-02-03_kello_18.24.20-removebg-preview.png" alt="Montana logo">\
+  <div>\
+    <h2>Meist\'e4</h2>\
+    <p>Montana Ristorante on Turussa toimiva moderni pizzeria\'96kebab\'96grilli, joka tarjoaa herkullisia annoksia jokaiselle. Valmistamme pizzat tuoreesta taikinasta, laadukkailla raaka-aineilla ja aidolla pizzeria-tyylill\'e4. Meilt\'e4 l\'f6yd\'e4t my\'f6s kebab-annokset, kana-d\'f6nerit, rullat, burgerit, pastat, salaatit sek\'e4 annokset grillist\'e4. Tarjoamme nopeat noudot, yst\'e4v\'e4llisen palvelun ja isot annokset. Tilaa helposti my\'f6s Woltin ja Foodoran kautta. Tervetuloa nauttimaan hyv\'e4\'e4 ruokaa \'96 Montana Ristorante Turussa!</p>\
+  </div>\
+</section>\
+\
+<section id="menu">\
+  <h2>Menu</h2>\
+  <div class="accordion">\
+\
+    <details>\
+      <summary>Hot Wings & Grill</summary>\
+      <p class="menu-note">Sis\'e4lt\'e4\'e4 ranskalaiset tai riisin ja 0,33 l juoman</p>\
+      <div class="menu-item"><h3>Hot Wings 10 kpl</h3><span>13,00 \'80</span></div>\
+      <div class="menu-item"><h3>Hot Wings 16 kpl</h3><span>15,00 \'80</span></div>\
+      <div class="menu-item"><h3>Hot Wings 20 kpl</h3><span>18,00 \'80</span></div>\
+      <div class="menu-item"><h3>Hot Wings 25 kpl</h3><span>22,50 \'80</span></div>\
+      <div class="menu-item"><h3>Makkaraperunat</h3><span>13,00 \'80</span></div>\
+      <div class="menu-item"><h3>Kanakori</h3><span>13,50 \'80</span></div>\
+      <div class="menu-item"><h3>Kananuggetit 10 kpl</h3><span>13,00 \'80</span></div>\
+    </details>\
+\
+    <details>\
+      <summary>Burgerit</summary>\
+      <p class="menu-note">Kaikki burgerit sis\'e4lt\'e4v\'e4t 0,33 l juoman</p>\
+      <div class="menu-item"><h3>Montana Burger</h3><span>18,50 \'80</span><p>Briossi, 180 g naudanlihapihvi, cheddar, marinoitu punasipuli, salaatti, tomaatti ja aioli. Lisukkeena maalaisranskalaiset.</p></div>\
+      <div class="menu-item"><h3>Halloumiburger</h3><span>18,50 \'80</span><p>Friteerattu halloumi, basilika-majoneesi ja maalaisranskalaiset.</p></div>\
+      <div class="menu-item"><h3>Kanaburger</h3><span>18,50 \'80</span><p>Friteerattu kana, marinoitu kurkku, teriyaki-majoneesi ja maalaisranskalaiset.</p></div>\
+      <div class="menu-item"><h3>Juustoburger</h3><span>18,50 \'80</span><p>180 g naudanlihapihvi, tuplajuusto, hillottu sipuli, suolakurkku ja kurkkumajoneesi.</p></div>\
+      <div class="menu-item"><h3>La Brutal BBQ</h3><span>18,50 \'80</span><p>Cheddarkastike, paahdettu sipuli, pekoni ja BBQ-kastike.</p></div>\
+    </details>\
+\
+    <details>\
+      <summary>Pasta</summary>\
+      <p class="menu-note">Kaikki pasta-annokset sis\'e4lt\'e4v\'e4t 0,33 l juoman</p>\
+      <div class="menu-item"><h3>Tagliatelle al Salmone</h3><span>16,50 \'80</span><p>Valkosipulikerma, savulohi, kurkku, marinoitu punasipuli, parmesaani ja rucola.</p></div>\
+      <div class="menu-item"><h3>Gamberetti</h3><span>16,50 \'80</span><p>Valkosipulikerma, katkaravut, chili, parmesaani ja rucola.</p></div>\
+      <div class="menu-item"><h3>Alfredo</h3><span>16,50 \'80</span><p>Valkosipulikerma, kananrinta, kirsikkatomaatti, parmesaani ja rucola.</p></div>\
+      <div class="menu-item"><h3>Con Pesto di Feta</h3><span>16,50 \'80</span><p>Pesto, fetajuusto, kirsikkatomaatti, parmesaani ja rucola.</p></div>\
+      <div class="menu-item"><h3>Mozzarella Pasta</h3><span>16,50 \'80</span><p>Pesto, mozzarella, kirsikkatomaatti, parmesaani ja rucola.</p></div>\
+    </details>\
+\
+    <details>\
+      <summary>Mix</summary>\
+      <p class="menu-note">Kaikki annokset sis\'e4lt\'e4v\'e4t 0,33 l juoman</p>\
+      <div class="menu-item"><h3>Lehtipihvi</h3><span>20,00 \'80</span><p>2 possun ulkofileepihvi\'e4, grillikasviksia ja maalaisranskalaiset.</p></div>\
+      <div class="menu-item"><h3>Kana Bowl</h3><span>18,00 \'80</span><p>Friteerattua kanaa, riisi\'e4, soijakastiketta, marinoitua kurkkua, mangoa ja teriyaki-majoneesia.</p></div>\
+      <div class="menu-item"><h3>Parmesan & Basil</h3><span>10,00 \'80</span><p>Ranskalaiset, parmesaani, basilika-majoneesi ja rucola.</p></div>\
+      <div class="menu-item"><h3>Jumeirah</h3><span>10,00 \'80</span><p>Ranskalaiset, valkosipulimajoneesi, feta, paahdettu sipuli ja rucola.</p></div>\
+      <div class="menu-item"><h3>Kana-Caesar</h3><span>15,00 \'80</span><p>Pariloitua kanaa, talon caesarkastike, parmesaani ja krutongit.</p></div>\
+      <div class="menu-item"><h3>Rapu-Caesar</h3><span>15,00 \'80</span><p>Talon caesarkastike, katkarapuja, parmesaani ja krutongit.</p></div>\
+      <div class="menu-item"><h3>Halloumi-salaatti</h3><span>15,00 \'80</span><p>Friteerattua halloumia, kurkkua, kirsikkatomaatti ja basilikamajoneesi.</p></div>\
+      <div class="menu-item"><h3>Vuohenjuustosalaatti</h3><span>15,00 \'80</span><p>Paahdettua vuohenjuustoa, oliivia, tomaattia ja basilikamajoneesi.</p></div>\
+    </details>\
+\
+    <details>\
+      <summary>Pizza</summary>\
+      <p class="menu-note">Kaikkiin pizzoihin sis\'e4ltyy salaattip\'f6yt\'e4 ja 0,33 l juoma</p>\
+      <h3 class="subhead">Normaalit pizzat</h3>\
+      <div class="menu-item"><h3>Bolognese</h3><span>12,00 \'80</span><p>Jauheliha</p></div>\
+      <div class="menu-item"><h3>Americana</h3><span>12,50 \'80</span><p>Ananas, kinkku</p></div>\
+      <div class="menu-item"><h3>Vegetariana</h3><span>14,50 \'80</span><p>Ananas, herkkusieni, oliivi ja paprika</p></div>\
+      <div class="menu-item"><h3>Fantasia</h3><span>13,00\'9615,00 \'80</span><p>2\'964 t\'e4ytett\'e4 valintasi mukaan</p></div>\
+      <div class="menu-item"><h3>Kaikki perhepizzat</h3><span>25,00 \'80</span></div>\
+      <h3 class="subhead">Modernit pizzat</h3>\
+      <div class="menu-item"><h3>Margherita</h3><span>15,00 \'80</span><p>Tomaattikastike, bufala mozzarella ja rucola</p></div>\
+      <div class="menu-item"><h3>Parma Rucola</h3><span>15,00 \'80</span><p>Parmankinkku, rucola, parmesaani ja valkosipuli\'f6ljy</p></div>\
+      <div class="menu-item"><h3>Calabrese</h3><span>15,00 \'80</span><p>Nduja-makkara, bufala mozzarella ja rucola</p></div>\
+    </details>\
+\
+    <details>\
+      <summary>Kebab & Kana-d\'f6ner</summary>\
+      <p class="menu-note">Sis\'e4lt\'e4\'e4 salaattip\'f6yd\'e4n ja 0,33 l juoman</p>\
+      <div class="menu-item"><h3>Kebab pitaleip\'e4</h3><span>12,00 \'80</span></div>\
+      <div class="menu-item"><h3>Kebab ranskalaisilla</h3><span>13,50 \'80</span></div>\
+      <div class="menu-item"><h3>Kebab riisill\'e4</h3><span>13,50 \'80</span></div>\
+      <div class="menu-item"><h3>Iskender kebab</h3><span>13,50 \'80</span></div>\
+      <h3 class="subhead">Rullat</h3>\
+      <div class="menu-item"><h3>Rullakebab</h3><span>13,50 \'80</span></div>\
+      <div class="menu-item"><h3>Rullakebab juustolla</h3><span>14,50 \'80</span></div>\
+      <div class="menu-item"><h3>Rullakebab ranskalaisilla</h3><span>15,00 \'80</span></div>\
+      <div class="menu-item"><h3>Kanakebabrulla ranskalaisilla</h3><span>16,50 \'80</span></div>\
+      <div class="menu-item"><h3>Tuplaliha</h3><span>5,50 \'80</span><p>Kebab tai kanad\'f6ner</p></div>\
+    </details>\
+\
+  </div>\
+</section>\
+\
+<section id="contact">\
+  <h2>Yhteystiedot</h2>\
+  <p>Tommilankatu 1, 20300 Turku</p>\
+  <p>Puh. +358 44 246 6447</p>\
+</section>\
+\
+<footer>\
+  <img src="/mnt/data/N\'e4ytt\'f6kuva_2026-02-03_kello_18.24.20-removebg-preview.png" alt="Montana logo">\
+  <p><strong>Aukioloajat</strong><br>Ma\'96Pe 11\'9622<br>La\'96Su 12\'9622</p>\
+  <p>S\'e4hk\'f6posti: <a href="mailto:makumatka.nordic@gmail.com" style="color:var(--primary)">makumatka.nordic@gmail.com</a></p>\
+  <p>\'a9 2026 <strong>Montana Ristorante</strong> \'b7 Turku</p>\
+</footer>\
+\
+</body>\
+</html>\
+}
